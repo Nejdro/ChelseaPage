@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Chelsea FC</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          
+              
+              
+              <a class="navbar-brand" href="#"><img id="logo" src="static/logo.png" /></a>
+          
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li class="active">
+              </ul>
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <a class="nav-link" href="/">Strona Główna <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/historia">Historia</a>
+                    </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/lista">Galeria</a>
+                      </li>
+                      
+                      
+                      
+                        <li class="nav-item">
+                          <a class="nav-link" href="/for">Forum</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/kontakt">Kontakt</a>
+                    </li>
+                      {% if not current_user.is_authenticated %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="/rejestracja">Zarejestruj sie</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/log">Zaloguj sie</a>
+                    {% endif %}
+                  </li>
+                  {% if current_user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logout">Wyloguj sie</a>
+                    </li>
+                    {% endif %}
+
+                
+              </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+                  </form>
+              </div>
+          </nav>
+          </nav>
+        </br>
+        
+      <div class="container"><div class="flip1 white">Początek</div>
+      <div class="panel1 white">
+         W 1904 stadion Stamford Bridge został nabyty przez przedsiębiorców budowlanych Henry Augustusa i 
+         Josepha T. Mearsów. Dostosowali oni obiekt do potrzeb gry w piłkę nożną i zamierzali sprzedać klubowi 
+         Fulham F.C. Oferta kupna została jednak odrzucona, dlatego biznesmeni postanowili założyć klub. 
+         Dokonano tego 14 marca 1905 w pubie „The Rinsing Sun”, a klub otrzymał nazwę sąsiedniej dzielnicy – Chelsea.
+          Pierwszy oficjalny sezon zespół rozpoczął rok później w drugiej lidze pod opieką trenera Johna Robertsona.
+           Pierwszym oficjalnym spotkaniem był przegrany 0:1 mecz ze Stockport County F.C.,
+            który odbył się 1 września 1905r. Zaledwie 3 dni później Chelsea zanotowała pierwsze zwycięstwo,
+             pokonując 4:0 w towarzyskim spotkaniu Liverpool F.C. 9 września w wygranym 1:0 pojedynku z Blackpool FC, 
+             pierwszą bramkę w oficjalnym meczu zdobył grający trener, Robertson. Historyczny, pierwszy rekord frekwencji 
+             padł w Wielki Piątek w 1906 roku, podczas meczu z Manchester United F.C., 
+             który obejrzało na Stamford Bridge 67 tysięcy widzów. 
+             W 1907 napastnik George Hilsdon został pierwszym w historii Chelsea zawodnikiem, który otrzymał powołanie do reprezentacji Anglii.
+              W sezonie 1907/1908 drużyna awansowała do Division One, najwyższego wówczas szczebla rozgrywek ligowych w Anglii. 
+              W 1912 roku wskutek niewydolności nerki zmarł właściciel i współzałożyciel Chelsea – Henry Augustus Mears.
+               Na pogrzeb biznesmena przybyły tłumy sympatyków The Blues. Mears został pochowany na Brompton Cemetery,
+                położonym niedaleko Stamford Bridge. Po jego śmierci prawa do klubu zostały przepisane na jego potomków.
+                 Nowy menadżer zespołu David Calderhead pełnił funkcję trenera aż 26 lat,
+                  a w 1913 sprowadził do drużyny pierwszego zagranicznego piłkarza, był nim Duńczyk Nils Middelboe.
+                   W tym czasie klub przeżywał naprzemiennie sukcesy i porażki, aż w sezonie 1914/1915 awansował do finału Pucharu Anglii,
+                    rozgrywanego na stadionie Old Trafford, w którym zespół Chelsea został pokonany 3:0 przez Sheffield United.
+                     W lutym 1920 roku król Zjednoczonego Królestwa Wielkiej Brytanii i Irlandii Jerzy V widział zwycięstwo
+                      The Blues z Leicester City F.C. Przed ukończeniem budowy Wembley (1923), na Stamford Bridge rozegrano
+                       trzy finały Pucharu Anglii. Chelsea miała sporą okazję wziąć udział w jednym z nich w 1920 roku,
+                        jednak w półfinale musiała uznać wyższość Aston Villi.
+      </div>
+      <div class="flip2 white">Rozwój</div>
+      <div class="panel2 white">
+          Na początku lat 90. londyński zespół dysponował coraz większym budżetem transferowym, 
+          wtedy też po raz pierwszy wydano na transfer 1 milion funtów, za którego kupiono Dennisa Wise’a.
+           W roku 1993 zespół awansował do Premiership. Klubowi po latach kryzysu udało się w końcu zgromadzić fundusze na solidne wzmocnienia. 
+           Trener Glenn Hoddle przekonał holenderskiego gwiazdora Ruuda Gullita, aby ten dołączył do Chelsea. 
+           W tym samym oknie transferowym do klubu przybyli również walijski napastnik Mark Hughes oraz Rumun Dan Petrescu.
+            Nowi piłkarze szybko zjednali do siebie kibiców.
+             Gullit zaledwie w ciągu jednego sezonu został przez okrzyknięty najlepszym zawodnikiem w historii klubu. 
+             Latem 1996 Hoddle został wybrany trenerem reprezentacji Anglii, jednak Chelsea nie szukała nowego menadżera.
+              Ruud Gullit przyjął propozycję objęcia stanowiska i dzięki swoim kontaktom sprowadził kolejne gwiazdy na Stamford Bridge. 
+              Do Londynu przyleciał słynny włoski snajper Gianluca Vialli, a także Roberto Di Matteo, Frank Lebœuf oraz Gianfranco Zola.
+               Zespół pod wodzą Ruuda Gullita w finałowym meczu Pucharu Anglii na Wembley zwyciężył Middlesbrough 2:0 po bramkach Roberto Di Matteo i Eddiego Newtona przerywając serię dwudziestu sześciu lat bez jakiegokolwiek tytułu.
+                22 października 1996 roku z powodu awarii helikoptera zginął Matthew Harding, milioner i wicedyrektor klubu, 
+                który praktycznie przez całe życie wspierał The Blues. 
+                Na jego cześć północna trybuna Stamford Bridge nosi obecnie jego imię.
+                 W roku 1999 klub zajął trzecie miejsce w lidze mając w składzie takich zawodników jak Didier Deschamps, Gianfranco Zola, Gianluca Vialli, 
+                 Ruud Gullit, Albert Ferrer czy Mark Hughes. Dalsze sukcesy to finał Pucharu Anglii (1994), zdobycie Pucharu Anglii (1997), 
+                 zdobycie Pucharu Zdobywców Pucharów (1998), 
+          Superpucharu Europy i Pucharu Ligi oraz kolejny Puchar kraju, a także Tarcza Dobroczynności.
+      </div>
+      <div class="flip4 white">Aktualnie</div>
+      <div class="panel4 white">
+          Od sezonu 2019/20 trenerem zespołu został Frank Lampard. W pierwszym oficjalnym meczu pod jego wodzą Chelsea przegrała 4:0 z Manchesterem United, natomiast w meczu o Superpuchar Europy,
+           The Blues ulegli Liverpoolowi w rzutach karnych (3:2).
+      </div>
+      
+  
+            
+          </body>
+          <footer>
+              <div class=”container”>
+                  <button type="button" class="btn btn-primary btn-lg btn-info btn-block" data-toggle="modal" data-target="#myModal">
+                       Polityka prywatności
+                  </button>
+              </div>
+          </footer> 
+          
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      <h4 class="modal-title" id="myModalLabel">Polityka prywatności</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>
+                                      <h1> Polityka prywatności </h1>
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                    </div>
+                  </div>
+        
+    
+        
+      <style>.flip1, .flip2, .flip3, .flip4, .flip5
+        {
+            padding: 5px;
+            text-align: center;
+            background-color: #474747;
+            border: solid 1px #474747;
+        }
+        .panel1, .panel2, .panel3, .panel4, .panel5
+        {
+            text-align: center;
+            padding: 50px;
+            display: none;
+            background-color: ghostwhite;
+        }
+        #panel, #flip 
+        {
+            padding: 5px;
+            text-align: center;
+            background-color: #474747;
+            border: solid 1px #474747;
+        }</style>
+    
+    </main><!-- /.container -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for ('static', filename='js/slide.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/jquery.min.js')}}"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+
+</html>
+    
+ 

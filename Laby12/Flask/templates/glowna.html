@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Chelsea FC</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          
+              
+              
+              <a class="navbar-brand" href="#"><img id="logo" src="static/logo.png" /></a>
+          
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li class="active">
+              </ul>
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <a class="nav-link" href="/">Strona Główna <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/historia">Historia</a>
+                    </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/lista">Galeria</a>
+                      </li>
+                      
+                      
+                      
+                        <li class="nav-item">
+                          <a class="nav-link" href="/for">Forum</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/kontakt">Kontakt</a>
+                    </li>
+                      {% if not current_user.is_authenticated %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="/rejestracja">Zarejestruj sie</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/log">Zaloguj sie</a>
+                    {% endif %}
+                  </li>
+                  {% if current_user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logout">Wyloguj sie</a>
+                    </li>
+                    {% endif %}
+
+                
+              </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+                  </form>
+              </div>
+          </nav>
+          </nav>
+            
+                
+                
+                
+                  
+                  <div><p></p></div>
+
+                  <style>
+                    
+                    .carousel-inner img {
+                        width: 100%;
+                        
+                    }
+                   
+                    </style>
+                  <div id="demo" class="carousel slide" data-ride="carousel" >
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                  
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="static/1b.jpg" alt="Los Angeles" height="500">
+                        <div class="carousel-caption">
+                          <h3>Hazard bohaterem</h3>
+                          <p>Derby Londynu dla Chelsea!</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/2a.jpg" alt="Chicago"  height="500">
+                        <div class="carousel-caption">
+                          <h3>United za mocne</h3>
+                          <p>Manchester górą w bitwie o Anglię</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/3a.jpg" alt="New York" height="500">
+                        <div class="carousel-caption">
+                          <h3>Alonso z nowym kontarktem</h3>
+                          <p>Obrońca pozostaje w klubie!</p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  
+                  </div>
+                  <div class="container">
+                  </br>
+                  
+                        <div class=”container” id="info" style="background-color: rgba(197, 192, 193, 0.5);font-weight:bold;  text-align:center;border:1px solid blue">
+                        <center><h1>Chelsea FC</h1></center>
+                        <p>Chelsea Football Club – angielski klub piłkarski mający swoją siedzibę w zachodnim Londynie, w dzielnicy Hammersmith and Fulham. Został założony 10 marca 1905 roku, obecnie gra w Premier League i większość sezonów spędził w najwyższej klasie rozgrywkowej w Anglii. Klub Chelsea był sześciokrotnie mistrzem Anglii, ponadto zdobył puchar Ligi Mistrzów UEFA (w roku 2012) osiem razy Puchar Anglii, pięć razy Puchar Ligi Angielskiej i dwukrotnie zwyciężył w rozgrywkach Pucharu Zdobywców Pucharów.
+                        </p>
+						<center><h2>Informacje</h2></center>
+						<p>
+              Tradycyjne kolory strojów Chelsea to niebieskie koszulki i spodenki oraz białe getry. Herb klubu był kilkukrotnie modernizowany. Aktualny przedstawia ceremonialnego lwa trzymającego berło i jest zmodernizowaną wersją od tego z lat 50. Średnia frekwencja na Stamford Bridge w sezonie 2016/2017 wynosiła 41 508 widzów, co dało klubowi szóste miejsce w Premier League.
+            </p>
+                        </div>
+                        
+						
+										
+<div id="linki" style="font-weight:bold; background-color:rgba(197, 192, 193, 0.5); border: 1px solid blue"> 
+  <center>           
+<ul class="nav nav-pills flex-column">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pl.wikipedia.org/wiki/Chelsea_F.C.">Wikipedia</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.google.com/search?biw=1536&bih=754&sxsrf=ACYBGNTuOjUl22wepuw9B-tUPbjJd0l_ug%3A1572368814552&ei=rnG4XaSmIaWLmwXInayICQ&q=chelsea+tabela&oq=chelsea+tabela&gs_l=psy-ab.3..0l2j0i22i30l8.987.1892..1979...0.2..0.83.522.7......0....1..gws-wiz.......0i71j35i39j0i131j0i67j0i203j0i10i203.YjMCkTWsWvQ&ved=0ahUKEwiktZal-sHlAhWlxaYKHcgOC5EQ4dUDCAs&uact=5#sie=t;/m/023fb;2;/m/02_tc;st;fp;1;;">Tabela</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.flashscore.pl/druzyna/chelsea/4fGZN2oK/spotkania/">Terminarz</a>
+  </li>
+  
+</ul>
+</center> 
+</div>
+</body>
+                                                        
+		
+										<footer>
+	<div class=”container”>
+		<button type="button" class="btn btn-primary btn-lg btn-info btn-block" data-toggle="modal" data-target="#myModal">
+ 			Polityka prywatności
+		</button>
+	</div>
+</footer> 
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					  <div class="modal-dialog" role="document">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Polityka prywatności</h4>
+						  </div>
+						  <div class="modal-body">
+							<p>
+							<h1> Polityka prywatności </h1>
+							</p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+					  </div>
+          </div>
+          
+ 
+            
+            <script src="js/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <script src="./scripts.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+            <script src="js/controllers.js"></script>
+
+            
+        <main role="main" class="container">
+            
+    </main><!-- /.container -->
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  
+</html>
+
+
+
+
+
+
+
